@@ -9,7 +9,8 @@ app.use(express.static("static"));
 
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "static/index.html");
+    // res.sendFile(__dirname + "static/index.html");
+    res.send("Hello World");
 })
 
 
