@@ -9,8 +9,8 @@ app.use(express.static("static"));
 
 
 app.get("/", (req, res) => {
-    // res.sendFile(__dirname + "/static/form.html");
-    res.send("Hello World");
+    res.sendFile(__dirname + "/static/form.html");
+    // res.send("Hello World");
 })
 
 
