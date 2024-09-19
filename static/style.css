@@ -261,11 +261,13 @@ aside label {
     text-decoration: none;
     background: transparent;
     border: 2px solid rgba(217, 217, 217, 0.26);
+    backdrop-filter: none;
 }
 
 
 .lower-part button[type="submit"]:hover, .lower-part a:hover {
     background: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(4.35px);
 }
 
 
