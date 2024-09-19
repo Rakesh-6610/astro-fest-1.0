@@ -217,6 +217,7 @@ aside label {
     background: none;
     justify-content: flex-end;
     padding: 0;
+    backdrop-filter: none;
 }
 
 
