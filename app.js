@@ -19,8 +19,11 @@ function sendMail(status, email) {
             pass: process.env.PASSWORD,
         },
     });
+
+    let mailOptions;
+
     if (status) {
-        const mailOptions = {
+        mailOptions = {
             from: `"Astro Fest 1.0" <${process.env.EMAIL}>`,
             to: email,
             subject: "Registration Status",
@@ -158,7 +161,7 @@ function sendMail(status, email) {
         };
     }
     else {
-        const mailOptions = {
+        mailOptions = {
             from: `"Astro Fest 1.0" <${process.env.EMAIL}>`,
             to: email,
             subject: "Registration Status",
