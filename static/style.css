@@ -9,7 +9,7 @@
 
 body {
     width: 100%;
-    height: 100svh;
+    height: 100%;
     min-height: 100%;
     /* padding: 0px 20px; */
     background-image: url("./assets/images/cosmic.jpg");
@@ -24,9 +24,15 @@ body {
 
 main {
     height: 100%;
+    min-height: 100svh;
     width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
     /* min-width: 100%; */
-    padding: 45px 100px;
+    padding: 30px 100px;
 
     background: rgba(23, 28, 36, 0.59);
     border-left: 0.3px solid #c9c9c996;
@@ -52,7 +58,7 @@ header p {
     font-weight: 600;
     font-size: 18px;
     line-height: 23px;
-    margin: 20px 0px 30px 0px;
+    margin: 20px 0px 10px 0px;
 
     color: rgba(255, 255, 255, 0.61);
 }
@@ -103,7 +109,7 @@ input::placeholder {
 
 
 .segments-container {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
@@ -121,14 +127,11 @@ input::placeholder {
     list-style: none;
     display: flex;
     /* flex-direction: row-reverse; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 20px;
     flex-wrap: wrap;
 }
 
-/* .segment {
-
-} */
 
 input[type="checkbox"] {
     position: absolute;
@@ -214,4 +217,158 @@ aside label {
     background: none;
     justify-content: flex-end;
     padding: 0;
+}
+
+
+.lower-part {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.lower-part button[type="submit"], .lower-part a {
+    width: 100%;
+    height: 100%;
+    padding: 10px 35px;
+    background: rgba(217, 217, 217, 0.26);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    /* Rectangle 1 */
+
+    background: rgba(217, 217, 217, 0.26);
+    backdrop-filter: blur(4.35px);
+    border-radius: 9px;
+
+
+    font-weight: 650;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.01em;
+
+    color: rgba(255, 255, 255, 0.61);
+
+    transition: 0.25s;
+}
+
+.lower-part a {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid rgba(217, 217, 217, 0.26);
+}
+
+
+.lower-part button[type="submit"]:hover, .lower-part a:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+
+footer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* margin-top: 50px; */
+
+
+    /* © 2024 Weather Compass || All Rights Reserved */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    color: rgba(255, 255, 255, 0.68);
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1530px) {
+    header p {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    main {
+        width: 65%;
+    }
+}
+
+
+@media screen and (max-width: 1120px) {
+    main {
+        width: 75%;
+        border-right: 0.3px solid #c9c9c996;
+    }
+    body {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    main {
+        padding: 30px 50px;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    main {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    header h1 {
+        font-size: 55px;
+    }
+
+
+    .lower-part {
+        flex-direction: column;
+    }
+    .lower-part button, .lower-part a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    header h1 {
+        font-size: 45px;
+    }
+    header p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 30px !important;
+    }
+    aside label {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    main {
+        padding: 20px;
+    }
+    
 }

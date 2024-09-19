@@ -16,12 +16,6 @@ app.get("/", (req, res) => {
 
 app.post("/register", (req, res) => {
 
-    const fName = req.body.firstName;
-    const lName = req.body.lastName;
-    const fbLink = req.body.facebookLink;
-    const email = req.body.email;
-    const phone = req.body.phoneNumber;
-
     const segments = [];
     
     if (req.body.quiz) { segments.push("quiz") }
@@ -35,17 +29,16 @@ app.post("/register", (req, res) => {
         method: "POST",
         auth: `Rakesh:${process.env.MAILCHIMP_API_KEY}`,
     }
-
     const data = {
         members: [
             {
-                email_address: email,
+                email_address: req.body.email,
                 status: "subscribed",
                 merge_fields: {
-                    FNAME: fName,
-                    LNAME: lName,
-                    FBLINK: fbLink,
-                    PHONE: phone,
+                    FNAME: req.body.firstName,
+                    LNAME: req.body.lastName,
+                    FBLINK: req.body.facebookLink,
+                    PHONE: req.body.phoneNumber,
                     SEGMENTS: String(segments)
                 }
             }
