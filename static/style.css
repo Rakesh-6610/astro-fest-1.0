@@ -101,3 +101,117 @@ input::placeholder {
     color: rgba(255, 255, 255, 0.471);
 }
 
+
+.segments-container {
+    margin-top: 10px;
+}
+
+
+.segments-container h2 {
+    font-weight: 630;
+    font-size: 43px;
+    line-height: 68px;
+    /* identical to box height */
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.76);
+    margin-bottom: 10px;
+}
+
+.segments {
+    list-style: none;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* .segment {
+
+} */
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
+label {
+
+    padding: 12px 20px;
+
+    background: rgba(217, 217, 217, 0.19);
+    backdrop-filter: blur(1.45px);
+    border-radius: 9px;
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 7px;
+
+    font-weight: 600;
+    font-size: 20px;
+    /* line-height: px; */
+    letter-spacing: -0.01em;
+
+    color: rgba(255, 255, 255, 0.61);
+
+
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.56);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.25s;
+}
+
+label:hover ~ .check {
+    background-color: rgba(255, 255, 255, 0.56);
+}
+
+input[type="checkbox"]:checked ~ .check {
+    background-color: rgba(255, 255, 255, 0.56);
+}
+
+
+.check::after {
+    content: "";
+    position: absolute;
+    scale: 0.8;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    transform: 0.25s;
+}
+
+input[type="checkbox"]:checked ~ .check::after {
+    opacity: 1;
+}
+
+
+
+aside {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+aside label {
+    background: none;
+    justify-content: flex-end;
+    padding: 0;
+}
