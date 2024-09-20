@@ -166,7 +166,7 @@ function sendMail(status, fname, lname, email, response) {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
-            res.render("error", {
+            response.render("error", {
                 error: "server"
             })
         } else {
