@@ -7,16 +7,16 @@
 
 
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 
 </head>
 <body>
     <main>
         <header>
-            <h1>Astro Fest 1.0</h1>
+            <h1 class="animate">Astro Fest 1.0</h1>
 
-            <p>
+            <p class="animate">
                 Presenting the 1st astro based fest held by the parent company of Weather Compass, Vidshop. This is the place where you exabit the knowledge you have achieved about Astronomy and Space Science.   
             </p>
         </header>
@@ -29,9 +29,9 @@
             
             
             <section class="input-container">
-                <h2>Register Now</h2>
+                <h2 class="animate">Register Now</h2>
 
-                <div class="inputs">
+                <div class="inputs animate">
                     <input type="text" name="firstName" placeholder="First Name" required>
                     <input type="text" name="lastName" placeholder="Last Name" required>
 
@@ -44,9 +44,9 @@
 
             
             <section class="segments-container">
-                <h2>Segments</h2>
+                <h2 class="animate">Segments</h2>
                 
-                <ul class="segments">
+                <ul class="segments animate">
                     
                     <li class="segment">
                         <label for="quiz">Quiz
@@ -88,14 +88,14 @@
             </section>
 
             
-            <aside>
+            <aside class="animate">
                 <label for="terms">I agree to the terms and conditions
                     <input type="checkbox" name="terms" id="terms" value="terms" required>
                     <span class="check"></span> 
                 </label>
             </aside>
 
-            <ul class="lower-part">
+            <ul class="lower-part animate">
                 <li>
                     <button class="submit" type="submit">Submit</button>
                 </li>
@@ -107,7 +107,7 @@
         </form>
 
 
-        <footer>
+        <footer class="animate">
             <p>
                 © 2024 Weather Compass || All Rights Reserved
             </p>
@@ -119,4 +119,8 @@
 <script>
     document.querySelector("main").style.minHeight = window.innerHeight + "px";
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="./form.js"></script>
 </html>

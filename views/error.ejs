@@ -1,0 +1,22 @@
+<%- include('./partials/header'); -%>
+
+    <main>
+        <div class="error-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+
+        <article>
+            <% if (error === "email") {%>
+                <p>Invalid Email Address</p>
+            <% } else { %>
+                <p>Server error</p>
+                <p class="second">Please come again later</p>
+            <% } %>
+
+            <p>
+                Contact us at our <a href="https://www.facebook.com/rakesh.karmaker.980">Facebook Page</a> 
+            </p>
+        </article>
+    </main>
+
+<%- include('./partials/footer'); -%>
